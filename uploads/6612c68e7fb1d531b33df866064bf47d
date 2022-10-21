@@ -1,0 +1,279 @@
+Training pre-requisites
+	---> Basic training program
+	---> Virtual sessions
+Training plan
+Assessments
+	---> 6 assessments at the end of each module
+	---> 70% passing criteria
+	---> Re-test for people who score <70% (45 questions 65 mins)
+Tracker
+	---> Progress tracker needs to be maintained daily
+Software requirements
+	---> Need the latest web browser. Atleast 2 web browser.
+	---> SFDX CLI
+	---> Visual Studio Code IDE
+		---> Salesforce Extension Pack 
+Career paths
+	----> Salesforce Developer
+Certifications
+	---> Your first target is PD 1
+	---> Ask for vouchers ---> Raja Daniel and Nitin Fating
+Trailhead account/profile
+	Module
+	Project
+	Trail
+	Badge
+	Superbadge
+	Playground (special vesion of a DE org)
+
+	trailblazer.me/santoshnarayan
+
+Persistent Systems
+	---> we are Summit level partner with Salesforce
+
+
+what is Cloud computing ?
+	---> leveraging the power and reach of the internet to deliver 3 categories of services
+	---> IAAS == Infrastucture
+	---> PAAS == Platform [Salesforce]
+	---> SAAS == Software [Sales cloud, Marketing cloud, Service cloud etc etc]
+
+what is Salesforce ?
+	---> is the world's No. 1 CRM (Customer Relationship Management)
+	---> No code. Low code.
+	---> developing solutions is always a mix of using the point-and-click (built-in) features 
+	     and writing code
+	---> is based on a multi-tenant architecture
+
+Data center
+	---> is the physical building or floor in a building where the servers are kept
+
+what is an Org == Organization ?
+	---> is a collection/grouping of the data, metadata and configuration used to build apps on SF
+	---> an instance of Salesforce
+	---> Editions
+		Developer edition (DE org)
+		Performance 
+		Unlimited
+		Database
+	Username
+		---> firstname.middlename.lastname@sfbootcamp.february
+		---> trainer@sfbootcamp.february
+
+Project environment
+	Production org
+	Sandbox
+		Partial
+			QA
+			Developer
+		Full
+			QA
+			Developer
+
+Object ?
+	-----> is synonymous to a table in a database
+Field ?
+	----> is synonymous to a column in a table
+Record ?
+	---> is synonumous to rows/records/tuples in a table
+
+Standard
+	---> built-in / available out-of-the-box
+
+Devloper console
+	---> Cloud based IDE
+
+User experience / UI (UI-UX)
+	---> Lightning
+	---> Classic
+UI frameworks for Lightning experience on the SF platform
+	---> Aura
+	---> LWC (Lightning Web Component)
+
+UI framework for older Classic experience 
+	---> Visualforce
+
+Member
+Author
+
+Formula
+	---> Cross object formula
+Validation rules
+	---> are used to ensure clean and valid data input
+	---> true ---> input given is invalid
+	---> false ---> input given is valid
+
+
+Relationships
+	One-to-many
+	Many-to-one
+	One-to-one
+	Many-to-many
+
+Salesforce relationships
+	---> for any relatioship there is a parent side (object) and a child side (object)
+	---> in Salesforce the relationship field is "always" created on the child side
+	---> the parent side is the one side and the child side is the many side
+	---> the API name of custom relationship fields is suffixed with a __r
+
+	Lookup
+		---> is a loosely coupled relationship
+		A Keyboard ______________ produce Tune(s)
+		(A) must
+		(B) may or may not
+		
+		An Account Holder ________________ have College Degree(s)
+		(A) must
+		(B) may or may not
+
+	---> no impact ownership. the owner of the parent record and the owner of the child records
+		can be different users.
+	--> no impact of any cascading DML operation
+		
+	Master-Detail
+		---> is a tightly coupled relationship
+		A Keyboard ____________ have Key(s)
+		(A) must 
+		(B) may or may not
+
+		A Bank Account ____________ have Account Holder(s)
+		(A) must
+		(B) may or may not
+		
+	----> an object can have a maximum of 2 MD relationship fields
+	----> some DML operations like delete will cascade from the parent record to the child records
+	----> the owner of the parent record is also the owner of the child records
+	----> the first relationship is considered the primary relationship
+	----> a Standard object cannot be on detail (child) side
+	
+		Book copy
+
+	Self
+		----> is a flavour of a lookup relationship
+		---> a custom object called Bug related to itself
+
+	Hierarchical
+		---> can be seen only in the User standard object
+
+Junction object
+	AuthorsBooks
+	---> represent many-to-many relationships
+	---> has 2 MD relationships
+	Student			Course
+	1 --> Many course	1 --> Many student
+	
+	StudentsCourses
+		
+Borrower
+
+Roll-up summary
+	---> is a summarization field that can be created in the Master/Parent object
+	---> it is a field that can be created in custom objects only if the relationship is a MD 
+	---> there are some Standard objects which support roll-up summaries even though the 				relationship is Lookup
+
+Converting relationships
+	----> Lookup into Master detail
+		----> All existing child records "must be" associated a parent record
+	----> Master detail into Lookup
+		---> There should be no roll-up summary fields (Erase the field)
+
+Record Id
+	---> it a 18-character case insensitive alphanumeric string automatically generated by 				Salesforce
+	---> is stored in a field which has an API name == Id
+Global value set
+	----> used for picklist
+Dependent field
+	---> Can be used  to define dependent picklist
+
+Record types
+	---> to categorize records of an object
+	---> Members
+		---> Gold
+		---> Silver
+		---> Bronze
+
+Account --- means client
+	---> Customers	---> Tata Capital record
+	---> Partners	---> Salesforce Inc record
+
+Grocery store
+	Account
+		---> Customer ----> You and me
+		---> Partner  ----> Nestle wholeseller, Cadbury wholeseller
+
+Admission Management System / College Management System
+	SQL
+		tbl_students
+			student_id
+			name
+			phone
+			address
+			course
+			email
+			category ---> student, research scholar
+			fees	(for student)
+			stipend (for research scholar)
+	Salesforce
+		Student
+			student_id	
+			name
+			phone
+			address
+			course
+			email	
+			category ---> record type
+			fees
+			stipend	
+
+Page layout
+Object specific action
+Global action
+List view
+	Filters
+Email template
+	--> Merge field syntax {!Member__c.Name}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+
+
+
+
+
+
+
+
+
+
